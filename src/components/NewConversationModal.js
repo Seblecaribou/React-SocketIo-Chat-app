@@ -33,7 +33,7 @@ export default function NewConversationModal({ closeModal }) {
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           {contacts.map((contact) => (
-            <Form.Group>
+            <Form.Group key={contact.id}>
               <Form.Check
                 type="checkbox"
                 value={selectedContactIds.includes(contact.id)}
